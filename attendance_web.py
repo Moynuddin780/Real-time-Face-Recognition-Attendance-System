@@ -45,8 +45,8 @@ CLASSES = [
     "BICE22 Section B | C Programming"
 ]
 CLASSROOMS = {
-    "301": "rtsp://admin:L21D9DA6@192.168.0.187:554/cam/realmonitor?channel=1&subtype=0&unicast=true&proto=Onvif",
-    "302": "rtsp://admin:123456@192.168.0.104:554/cam/realmonitor?channel=1&subtype=0",
+    "301": "rtsp://admin:password@ipAddress:port/cam/realmonitor?channel=1&subtype=0&unicast=true&proto=Onvif",
+    "302": "rtsp://admin:password@ipAddress:port/cam/realmonitor?channel=1&subtype=0",
     "303": "rtsp://admin:password@10.10.50.171:554/cam/realmonitor?channel=1&subtype=0",
     "304": "rtsp://admin:password@10.10.50.172:554/cam/realmonitor?channel=1&subtype=0"
 }  # Replace with actual RTSP URLs
@@ -448,4 +448,5 @@ def confirm():
     return 'Attendance confirmed and saved.<br><a href="/dashboard">Back to Dashboard</a>'
 
 if __name__ == "__main__":
+
     webapp.run(debug=True, host='0.0.0.0', port=5000)
